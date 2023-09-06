@@ -1,0 +1,134 @@
+
+
+      {/* Edit Modal */}
+      {isEditModalOpen && (
+        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+          <div className="bg-white p-4 rounded-md">
+            <h3 className="text-lg font-semibold mb-2">Edit Resume</h3>
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="First Name"
+              value={editedFormData.firstName}
+              onChange={(e) =>
+                handleEditInputChange("firstName", e.target.value)
+              }
+            />
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Last Name"
+              value={editedFormData.lastName}
+              onChange={(e) =>
+                handleEditInputChange("lastName", e.target.value)
+              }
+            />
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="City"
+              value={editedFormData.city}
+              onChange={(e) => handleEditInputChange("city", e.target.value)}
+            />
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Phone Number"
+              value={editedFormData.phoneNumber}
+              onChange={(e) =>
+                handleEditInputChange("phoneNumber", e.target.value)
+              }
+            />
+            <input
+              type="email"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Email"
+              value={editedFormData.email}
+              onChange={(e) => handleEditInputChange("email", e.target.value)}
+            />
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="School"
+              value={editedFormData.school}
+              onChange={(e) => handleEditInputChange("school", e.target.value)}
+            />
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="SSC/HSC Percentage"
+              value={editedFormData.sscHscPercentage}
+              onChange={(e) =>
+                handleEditInputChange("sscHscPercentage", e.target.value)
+              }
+            />
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Highest Degree"
+              value={editedFormData.highestDegree}
+              onChange={(e) =>
+                handleEditInputChange("highestDegree", e.target.value)
+              }
+            />
+            <label>Company Name: </label>
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Company Name"
+              value={editedFormData.company1}
+              onChange={(e) =>
+                handleEditInputChange("company1", e.target.value)
+              }
+            />
+            <label>Position: </label>
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Position"
+              value={editedFormData.position1}
+              onChange={(e) =>
+                handleEditInputChange("position1", e.target.value)
+              }
+            />
+            <label>Experience: </label>
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Experience"
+              value={editedFormData.experience}
+              onChange={(e) =>
+                handleEditInputChange("experience", e.target.value)
+              }
+            />
+            <label>Specialization: </label>
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Specialization"
+              value={editedFormData.specialization}
+              onChange={(e) =>
+                handleEditInputChange("specialization", e.target.value)
+              }
+            />
+            <label>Hobbies: </label>
+            <input
+              type="text"
+              className="w-full border rounded px-3 py-2 mb-2"
+              placeholder="Hobbies"
+              value={editedFormData.hobbies}
+              onChange={(e) => handleEditInputChange("hobbies", e.target.value)}
+            />
+
+            <button
+              onClick={saveEditedData}
+              className="bg-blue-500 text-white px-4 py-2 rounded"
+            >
+              Save
+            </button>
+            <button onClick={closeEditModal} className="ml-2 text-gray-500">
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
